@@ -2,23 +2,23 @@
     "manifest_version": 3,
     "name": "Remove Blur",
     "version": "1.0",
-    "description": "Responde ai plus de graça pai",
+    "description": "Remove blur",
     "permissions": ["activeTab"],
     "background": {
-      "service_worker": "background.js"
+      "service_worker": "/src/background.js"
     },
     "action": {
-        "default_popup": "popup.html", 
+        "default_popup": "/src/popup.html", 
         "default_icon": {
-            "16": "icon16.png",
-            "48": "icon48.png",
-            "128": "icon128.png"
+            "16": "/src/icon16.png",
+            "48": "/src/icon48.png",
+            "128": "/src/icon128.png"
         }
     },
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
-        "js": ["content.js"],
+        "js": ["/src/content.js"],
         "run_at": "document_end"
       }
     ]
